@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff6f61;
+        }
+        .project img {
+            width: 100%;
+            max-width: 400px;
+            display: none;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>My Portfolio</h1>
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="C:\Users\Aastha\OneDrive\Desktop\imp docs\mypic1.jpg" alt="Profile Picture" class="profile-pic">
+            <p id="intro-text">Hello! I'm Astha Singh Kushwaha, pursuing Btech Electrical & Computer Engineering.</p>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio website showcasing skills, projects, and contact details.</p>
+                <a href="https://github.com/AsthaSk/code-galaxy/tree/main/Portfolio" onclick="toggleProjectImage('project1-img')">View Project</a>
+                <img id="project1-img" src="C:\Users\Aastha\OneDrive\Pictures\Screenshots\Screenshot 2025-02-11 000047.png" alt="Portfolio Website Preview">
+            </div>
+            <div class="project">
+                <h3>To-Do List App</h3>
+                <p>A to-do list web app that allows users to add, edit, and delete tasks.</p>
+                <a href="https://github.com/AsthaSk/code-galaxy/blob/main/experiments/todolist.html" onclick="toggleProjectImage('project2-img')">View Project</a>
+                <img id="project2-img" src="C:\Users\Aastha\OneDrive\Pictures\Screenshots\Screenshot 2025-02-11 000306.png" alt="To-Do List App Preview">
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="email" id="email" placeholder="Your Email">
+                <textarea id="message" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Send Message</button>
+                <p id="form-message"></p>
+            </form>
+        </section>
+    </div>
+    
+    <footer>
+        <p>2025 My Portfolio | Made with ❤️</p>
+    </footer>
+    
+    <script>
+        function toggleProjectImage(imageId) {
+            let img = document.getElementById(imageId);
+            img.style.display = img.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
